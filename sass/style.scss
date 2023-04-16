@@ -83,11 +83,12 @@ img, svg {
 
 .header {
     min-height: 729px;
-    background-image: url('/images/header/Background_Image.png');
+    background: linear-gradient(#0000008c, #00000069), url(/images/header/Background_Image.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    position: relative;
 }
 
 // nav bar
@@ -98,15 +99,24 @@ img, svg {
     align-items: center;
 }
 
-.nav__logo {
-}
-
 .nav__links {
-    display: flex;
+    display: none;
     gap: 15px;
     color: #fff;
     font-family: $first-ff;
     font-size: 14px;
+}
+
+.nav__hamburger {
+    color: #fff;
+
+    & button {
+        background: transparent;
+    }
+
+    & i {
+        font-size: 20px;
+    }
 }
 
 // header content
@@ -122,22 +132,24 @@ img, svg {
 }
 
 .header__subtitle {
-    font-size: 40px;
+    font-size: 25px;
     font-family: $second-ff;
     margin-bottom: 26px;
 }
+
 .header__title {
-    font-size: 75px;
+    font-size: 50px;
     font-weight: 700;
     font-family: $first-ff;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
+
 .header__cta {
     font-size: 18px;
     font-weight: 700;
     font-family: $first-ff;
-    padding: 25px 51px;
+    padding: 15px 31px;
     background-color: $theme-color;
     border-radius: 8px;
 }
@@ -225,12 +237,14 @@ img, svg {
 .footer__copyright {
     font-family: $first-ff;
     font-size: 14px;
+    text-align: center;
 }
 
 .footer__links {
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .footer__link {
@@ -245,4 +259,41 @@ img, svg {
 
 .footer__link img {
     vertical-align: middle;
+}
+
+// media queries 
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    .footer__copyright {
+        text-align: left;
+    }
+
+    .footer__links {
+        margin-top: 0;
+    }
+    
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .nav__links {
+        display: flex;
+    }
+
+    .nav__hamburger {
+        display: none;
+    }
+
+    .header__subtitle {
+        font-size: 40px;
+    }
+    
+    .header__title {
+        font-size: 75px;
+    }
+
+    .header__cta {
+        padding: 25px 51px;
+    }
 }
