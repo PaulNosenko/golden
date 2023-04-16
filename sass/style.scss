@@ -172,3 +172,77 @@ img, svg {
     font-family: $third-ff;
     font-size: 14px;
 }
+
+// portfolio
+
+.portfolio {
+    background-color: #f7f7f7;
+}
+
+.portfolio__row {
+    margin-top: 60px;
+}
+
+.portfolio__item {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.portfolio__img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.portfolio__content {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.portfolio__title {
+    font-family: $first-ff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.portfolio__text {
+    font-family: $third-ff;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+// footer
+
+.footer {
+    padding: 40px 0;
+}
+
+.footer__row {
+    display: flex;
+    align-items: center;
+}
+
+.footer__copyright {
+    font-family: $first-ff;
+    font-size: 14px;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer__link {
+    background-color: #222;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.footer__link img {
+    vertical-align: middle;
+}
