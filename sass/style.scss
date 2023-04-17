@@ -2,43 +2,42 @@
 $first-ff: 'Poppins', sans-serif;
 $second-ff: 'Playfair Display', serif;
 $third-ff: 'Roboto Slab', serif;
-
 $theme-color: #fed136;
 
 /* Reset and base styles  */
 * {
-	padding: 0px;
-	margin: 0px;
-	border: none;
+    padding: 0px;
+    margin: 0px;
+    border: none;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 :focus,
 :active {
-	outline: none;
+    outline: none;
 }
 
 a:focus,
 a:active {
-	outline: none;
+    outline: none;
 }
 
 /* Links */
 
-a, button, a:link, a:visited  {
+a, button, a:link, a:visited {
     color: inherit;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
 }
 
-a:hover  {
-    /* color: inherit; */
+a:hover {
+    color: inherit;
     text-decoration: none;
 }
 
@@ -64,18 +63,18 @@ section {
 
 /* Common */
 
-h1, h2, h3, h4, h5, h6, p {
+h1,h2,h3,h4,h5,h6,p {
     font-size: inherit;
-	font-weight: inherit;
+    font-weight: inherit;
 }
 
 ul, ul li {
-	list-style: none;
+    list-style: none;
 }
 
 img, svg {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -101,10 +100,15 @@ img, svg {
 
 .nav__links {
     display: none;
-    gap: 15px;
+    gap: 40px;
     color: #fff;
     font-family: $first-ff;
     font-size: 14px;
+    
+
+    & a:hover {
+        color: #fed136;
+    }
 }
 
 .nav__hamburger {
@@ -152,6 +156,11 @@ img, svg {
     padding: 15px 31px;
     background-color: $theme-color;
     border-radius: 8px;
+    transition: transform ease .2s;
+
+    &:hover {
+        transform: scale(1.09);
+    }
 }
 
 // services
@@ -172,14 +181,14 @@ img, svg {
 .service__img {
     margin-bottom: 27px;
 }
-.service__content {
-}
+
 .service__title {
     font-family: $first-ff;
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 18px;
 }
+
 .service__text {
     font-family: $third-ff;
     font-size: 14px;
@@ -255,16 +264,16 @@ img, svg {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-}
 
-.footer__link img {
-    vertical-align: middle;
+    & img {
+        vertical-align: middle;
+    }
 }
 
 // media queries 
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
     .footer__copyright {
         text-align: left;
     }
@@ -272,11 +281,11 @@ img, svg {
     .footer__links {
         margin-top: 0;
     }
-    
+
 }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     .nav__links {
         display: flex;
     }
@@ -286,14 +295,25 @@ img, svg {
     }
 
     .header__subtitle {
-        font-size: 40px;
+        font-size: 36px;
     }
-    
+
     .header__title {
-        font-size: 75px;
+        font-size: 64px;
     }
 
     .header__cta {
         padding: 25px 51px;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .header__subtitle {
+        font-size: 40px;
+    }
+
+    .header__title {
+        font-size: 75px;
     }
 }
